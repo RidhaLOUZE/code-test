@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width= , initial-scale=1.0">
+    <!-- The description meta for SEO-->
+    <meta name="description" content=" DeepFake detection using deep Learning and GAN model" >
+    <title>DeepFake Detector</title>
+    <link rel="stylesheet" href="css/main.css">
+</head>
+<body>
+    <div class="navebar">
+        <div class="container">
+            <a class="logo" href="index.html">Deepfake<span>Detector</span></a>
+
+
+            <img id="mobile-cta" class="mobile-menu" src="images/menu.svg" alt="Open Navigation">
+
+
+            <nav>
+
+                <img id="mobile-exit" class="mobile-menu-exit" src="images/exit.svg" alt="Close Navigation ">
+                <ul class="primary-nav">
+                    <li class="current"><a href="#">Home</a></li>
+                    <li><a href="#">Solutions</a></li>
+                    <li><a href="#">Blog</a></li>
+                    
+                </ul>
+                <ul class="secondary-nav">
+                    <li ><a href="#">Contact</a></li>
+                    <li><a class="go-premium-cta" href="#">Go Premium </a></li>
+                    
+                    
+                </ul>
+            </nav>
+        </div>
+    </div>
+
+    <section class="hero">
+        <div class="container">
+            <div class="left-col">
+                
+                    <br>                         
+                <h1>Detect the fake image</h1>
+
+                <p class="subhead">you are wondered if the video or the image that you have watched on social media is real or fake, Ridha AI solutions will help you.
+                    Ridha AI solutions automatically detect real and fake images & videos in seconds
+                </p>
+                
+                <!-- upload image code-->
+                <div class="image-upload">
+                    <label for="file-input">
+                    <img id="previewImg" src="images/upload-img.png" style="width: 300px; height: 300px" />
+                    </label>
+            
+                    <input
+                    id="file-input"
+                    type="file"
+                    accept="image/*"
+                    onchange="previewFile(this);"
+                    style="display: none"
+                    />
+                </div>
+              <!-- end of th code-->
+                
+
+                <div class="hero-cta">
+                    <a href="#" class="primary-cta">Detect</a>
+    
+                </div>
+                <br>
+                
+            </div>
+            
+            <img id="previewImg" src="images/deepfake-illustration.svg" class="hero-img" alt="deepfake-illustration">
+            
+            
+            
+        </div>
+
+    </section>
+    <section class="features-section">
+        <div class="container">
+            <ul class="features-list">
+              
+                <li>Fast and smooth  detection</li>
+                <li>High accuracy</li>
+                
+                <li>Realtime detection</li>
+                <li>Fake images detection</li>
+            
+                <li>Fake Video detection </li>
+                <li>Other features</li>
+                
+            </ul>
+
+            <img src="images/deepfake-person2.jpg" alt="person-img" >
+        </div>
+    </section>
+    <section class="testimonials-section">
+        <div class="container">
+            <ul>
+                <br >
+                <br >
+                <br >
+                <br >
+                
+                <li >
+                    <img src="images/person.jpg" alt="person">
+                    <blockquote>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Quidem ea animi nesciunt quod quis nisi odio nostrum eveniet, a unde fuga fugiat amet officia. Reprehenderit facilis vel obcaecati placeat! Accusamus.</blockquote>
+                    <cite>- Ridha LOUZE</cite>
+                </li>
+                <li>
+                    <img src="images/person.jpg" alt="person">
+                    <blockquote>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Quidem ea animi nesciunt quod quis nisi odio nostrum eveniet, a unde fuga fugiat amet officia. Reprehenderit facilis vel obcaecati placeat! Accusamus.</blockquote>
+                    <cite>- Ridha LOUZE</cite>
+                </li>
+                <li>
+                    <img src="images/person.jpg" alt="person">
+                    <blockquote>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Quidem ea animi nesciunt quod quis nisi odio nostrum eveniet, a unde fuga fugiat amet officia. Reprehenderit facilis vel obcaecati placeat! Accusamus.</blockquote>
+                    <cite>- Ridha LOUZE</cite>
+                </li>
+                <br >
+                
+                
+            </ul>
+        </div>
+    </section>
+
+    <section class="contact-section">
+        <div class="container">
+            <div class="contact-left">
+                <h2>Contact</h2>
+                <form action="">
+                    <label for="name">Name</label>
+                    <input type="text" id="name" name="name" >
+
+                    <label for="email">Email</label>
+                    <input type="email" id="email" name="email" >
+
+                    <label for="message">Message</label>
+                    <textarea name="message" id="" cols="30" rows="10"></textarea>
+                    
+                    <input type="submit" class="send-message-cta" value="Send message">
+
+                </form>
+            </div>
+        </div>
+
+    </section>
+    <script>
+        const mobileBtn = document.getElementById('mobile-cta')
+            nav = document.querySelector('nav')
+            mobileBtnExit = document.getElementById('mobile-exit')
+        mobileBtn.addEventListener('click',()=>{
+            nav.classList.add('menu-btn');
+        })
+        mobileBtnExit.addEventListener('click',()=>{
+            nav.classList.remove('menu-btn');
+        })
+        //the add script
+        function previewFile(input) {
+        let file = document.getElementById("file-input").files[0];
+        let image = document.getElementById("previewImg");
+
+        if (file) {
+          let reader = new FileReader();
+
+          reader.onload = function (e) {
+            // the result image data
+            image.src = e.target.result;
+          };
+
+          reader.readAsDataURL(file);
+        }
+      }
+
+        
+    </script>
+
+</body>
+</html> 
